@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Programming Student | Portfolio</title>
+<link rel="icon" type="image./jpg" href="bow.png">
+
+<style>
+*{ box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #b39ad4;
+}
+
+header h1 { font-size: 2.7rem; margin-bottom: 0.5rem; }
+header p { color: #000000; }
+
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #421354;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 20px #37214a; 
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.typing {
+  border-right: 3px solid #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: typing 3s steps(30, end), blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 60%; }
+}
+
+@keyframes blink {
+  45% { border-color: transparent; }
+  100% { border-color: #dc96cf; }
+}
+
+h2 {
+  border-bottom: 2px solid #e9c2ff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills span {
+  display: inline-block;
+  background: #ffffff;
+  padding: 0.5rem 0.9rem;
+  margin: 0.4rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+.project {
+  background: #ffffff;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  color: #000000;
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #dcbeee;
+}
+
+a { color: #000000; text-decoration: none; }
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #e5ccf9;
+  color: #000000;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #ffffff; 
+  color: #000000;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header id="home">
+  <img src="hhhhhhhhhh.jfif" alt="Your Avatar" />
+  <h1><span class="typing">Hi, I'm Tianarie Ish F. Divinagracia</span></h1>
+  <p>Programming Student | Aspiring Software Developer</p>
+  <p>
+      <a href="https://web.facebook.com/ishi.reicanof/">Facebook</a> •
+     <a href="https://github.com/yarrie2513">Github</a> •
+     <a href="https://instagram.com/_yxriiee">Instagram</a> 
+    </p>
+    <a class="btn" href="#projects">View Projects</a>
+</header>
+
+<section id="about">
+<h2>About Me</h2>
+<p>I am a programming student with a passion for building software and solving real-world problems.</p>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<span>JavaScript</span><span>HTML</span><span>CSS</span>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="project">
+  <h3>Personal Portfolio</h3>
+  <p>This is the project we are currently developing for the fourth quarter, where we apply the concepts we have learned so far.</p>
+  <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+
+  <div class="project-gallery">
+    <img src="current.jpg" alt="">
+  </div>
+</div>
+
+<div class="project">
+  <h3>Test 1 and Activity_image</h3>
+  <p>This project was created during the first semester. It focuses on learning how to insert images into a webpage and how to style them using CSS. 
+  Through this project, we practiced basic layout design and image styling techniques.</p>
+  <p><strong>Tech:</strong> HTML, CSS</p>
+
+  <div class="project-gallery">
+    <img src="prod.jpg">
+    <img src="namichaaann.jpg ">
+  </div>
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: fonaciertianareish@gmail.com</p>
+<p>GitHub: yarrie2513</p>
+<p>Instagram:@_yxriiee</p>
+</section>
+
+<footer>
+<p>© 2026 ishikuni | Portfolio</p>
+</footer>
+
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
+  });
+}, { threshold: 0.2 });
+sections.forEach(section => observer.observe(section));
+
+
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
+const images = document.querySelectorAll(".project-gallery img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img => {
+  img.onclick = () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  };
+});
+
+closeBtn.onclick = () => modal.style.display = "none";
+modal.onclick = () => modal.style.display = "none";
+</script>
+
+</body>
+</html>
